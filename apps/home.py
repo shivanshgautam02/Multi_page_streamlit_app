@@ -99,7 +99,7 @@ def app():
         light_conditions = st.selectbox('Light Conditions', options=list(light_map.keys()))
         sex_of_driver = st.selectbox('Sex of Driver', options=['Male', 'Female'])
         season = st.selectbox('Season', options=list(season_map.keys()))
-        speed_limit = st.number_input('Speed Limit', min_value=10, step=10)
+        speed_limit = st.number_input('Speed Limit', min_value=10, max_value=70, step=10)
     # Prepare the inputs
         if st.button("Predict"):
             inputs = pd.DataFrame({
